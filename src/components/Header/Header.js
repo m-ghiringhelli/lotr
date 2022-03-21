@@ -5,25 +5,26 @@ import './Header.css';
 export default function Header() {
   return (
     <div className='header'>
+      <h1>learn of the rings</h1>
       <ul>
         <li>
-          <NavLink exact to='/'>
-            Home
+          <NavLink className='link' exact to='/'>
+            HOME
           </NavLink>
         </li>
         <li>
-          <NavLink to='/books'>
-            Books
+          <NavLink className='link' to='/books'>
+            BOOKS
           </NavLink>
         </li>
         <li>
-          <NavLink to='/characters'>
-            Characters
+          <NavLink className='link' to='/characters'>
+            CHARACTERS
           </NavLink>
         </li>
         <li>
-          <NavLink to='/films'>
-            Films
+          <NavLink className='link' to='/films'>
+            FILMS
           </NavLink>
         </li>
       </ul>

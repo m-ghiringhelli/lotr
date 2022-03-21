@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <div className='App'>
+      <div className='App' style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/lotr.png'})` }}>
         <Switch>
           <Route exact path='/'>
             <Main />
