@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function Filter() {
+export default function Filter({ race, setRace, query, setQuery }) {
   return (
     <div>
-      <select>
+      <select className='selector' onChange={(e) => {
+        setRace(e.target.value);
+      }}>
         <option value="All">All</option>
         <option value="Dwarf">Dwarf</option>
         <option value="Elf">Elf</option>
