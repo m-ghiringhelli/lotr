@@ -11,20 +11,23 @@ export default function Characters() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resp = await fetchCharacters('All', 'o');
+        const resp = await fetchCharacters(race, 'o');
         setCharacters(resp);
       } catch (e) {
         setErrorMessage('dangit broke');
       }
     };
     fetchData();
-  }, []);
+  }, [race]);
 
   console.log(characters);
 
   return (
     <div>
       <Filter {...{ race, setRace, query, setQuery }}/>
+      {characters.map((character) => (
+        <p key={character.id}>{character.name}</p>
+      ))}
     </div>
   );
 }
