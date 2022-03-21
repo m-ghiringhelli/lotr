@@ -3,7 +3,7 @@ import { fetchFilms } from '../../services/films';
 
 export default function Films() {
   const [films, setFilms] = useState([]);
-  const [errorMessage, setErrorMessage] = '';
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
