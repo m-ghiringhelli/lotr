@@ -1,0 +1,19 @@
+.header {
+    width: 100%;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+}
+
+.header li {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.active {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
