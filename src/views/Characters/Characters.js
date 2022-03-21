@@ -7,24 +7,25 @@ export default function Characters() {
   const [errorMessage, setErrorMessage] = useState('');
   const [race, setRace] = useState('');
   const [query, setQuery] = useState('');
+  const [queryText, setQueryText] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resp = await fetchCharacters(race, 'o');
+        const resp = await fetchCharacters(race, query);
         setCharacters(resp);
       } catch (e) {
         setErrorMessage('dangit broke');
       }
     };
     fetchData();
-  }, [race]);
+  }, [race, query]);
 
   console.log(characters);
 
   return (
     <div>
-      <Filter {...{ race, setRace, query, setQuery }}/>
+      <Filter {...{ race, setRace, query, setQuery, queryText, setQueryText }}/>
       {characters.map((character) => (
         <p key={character.id}>{character.name}</p>
       ))}

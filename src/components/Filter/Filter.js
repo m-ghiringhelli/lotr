@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Filter({ race, setRace, query, setQuery }) {
+export default function Filter({ race, setRace, query, setQuery, queryText, setQueryText }) {
   return (
     <div>
       <select className='selector' onChange={(e) => {
@@ -14,9 +14,9 @@ export default function Filter({ race, setRace, query, setQuery }) {
         <option value="Maiar">Maiar</option>
         <option value="Orc">Orc</option>
       </select>
-      <input type='text'>
+      <input type='text' onChange={(e) => {setQueryText(e.target.value);}}>
       </input>
-      <button>
+      <button onClick={(e) => {setQuery(queryText);}}>
         Search
       </button>
     </div>
