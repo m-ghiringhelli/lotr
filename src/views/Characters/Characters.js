@@ -5,7 +5,7 @@ import Filter from '../../components/Filter/Filter';
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
-  const [race, setRace] = useState('');
+  const [race, setRace] = useState('All');
   const [query, setQuery] = useState('');
   const [queryText, setQueryText] = useState('');
 
