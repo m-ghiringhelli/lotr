@@ -3,11 +3,13 @@ import Main from './views/Main/Main';
 import Books from './views/Books/Books';
 import Characters from './views/Characters/Characters';
 import Films from './views/Films/Films';
+import Header from './components/Header/Header';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <div className='App'>
         <Switch>
           <Route exact path='/'>
