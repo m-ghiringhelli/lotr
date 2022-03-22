@@ -22,10 +22,9 @@ export default function Characters() {
     fetchData();
   }, [race, query]);
 
-  console.log(characters);
-
   return (
     <div>
+      <p>{errorMessage}</p>
       <div className='filter'>
         <Filter {...{ race, setRace, query, setQuery, queryText, setQueryText }}/>
       </div>
