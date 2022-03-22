@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-test('1=1', () => {
-  expect(1).toBe(1);
+test('renders app', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/home/i);
+  expect(linkElement).toBeInTheDocument();
 });
 
 ReactDOM.render(
