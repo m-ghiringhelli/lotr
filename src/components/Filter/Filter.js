@@ -1,8 +1,9 @@
 import React from 'react';
+import './Filter.css';
 
 export default function Filter({ race, setRace, query, setQuery, queryText, setQueryText }) {
   return (
-    <div>
+    <div className='filter'>
       <select className='selector' onChange={(e) => {
         setRace(e.target.value);
       }}>
@@ -17,7 +18,7 @@ export default function Filter({ race, setRace, query, setQuery, queryText, setQ
       <input type='text' onChange={(e) => {setQueryText(e.target.value);}}>
       </input>
       <button onClick={(e) => {setQuery(queryText);}}>
-        Search
+        SEARCH
       </button>
     </div>
   );

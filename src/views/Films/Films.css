@@ -1,0 +1,28 @@
+.films-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.film {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.6);
+}
+
+img {
+    width: 250px;
+    border: 2px solid white;
+}
+
+p {
+    font-family: 'Playfair Display';
+    color: white;
+    font-size: 1.4rem;
+    padding: 10px;
+}

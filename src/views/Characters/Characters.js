@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchCharacters } from '../../services/characters';
 import Filter from '../../components/Filter/Filter';
+import './Characters.css';
 
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
@@ -25,10 +26,20 @@ export default function Characters() {
 
   return (
     <div>
-      <Filter {...{ race, setRace, query, setQuery, queryText, setQueryText }}/>
-      {characters.map((character) => (
-        <p key={character.id}>{character.name}</p>
-      ))}
+      <div className='filter'>
+        <Filter {...{ race, setRace, query, setQuery, queryText, setQueryText }}/>
+      </div>
+      <div className='character-container'>
+        {characters.map((character) => (
+          <div className='character' key={character.id}>
+            <h3>{character.name}</h3>
+            <div className='dates'>
+              <span>born: {character.birth}</span>
+              <span>died: {character.death}</span>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
