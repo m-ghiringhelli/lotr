@@ -1,0 +1,49 @@
+.filter {
+    margin: auto;
+    padding: 50px;
+}
+
+.character-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.character {
+    border: 4px solid white;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family: 'Playfair Display';
+    color: rgb(224, 224, 224);
+    font-size: 3rem;
+    padding: 50px;
+    margin: 80px 30px 30px 30px;
+    border-radius: 10px;
+}
+
+.character:hover {
+    background-color: rgba(65, 65, 65, 0.6);
+    color: rgb(255, 255, 255);
+}
+
+h3 {
+   text-align: center;
+}
+
+.dates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+span {
+    font-size: 1rem;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+b {
+    font-size: 2rem;
+}

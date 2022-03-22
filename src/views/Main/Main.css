@@ -1,0 +1,11 @@
+.intro {
+    background-color: rgba(49, 49, 49, 0.7);
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 200px;
+    margin: auto;
+}
+
+.main {
+    padding-top: 50px;
+}
