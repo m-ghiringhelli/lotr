@@ -1,15 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { render, screen } from '@testing-library/react';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-test('renders app', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/home/i);
-  expect(linkElement).toBeInTheDocument();
-});
 
 ReactDOM.render(
   <React.StrictMode>
