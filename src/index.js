@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+test('1=1', () => {
+  expect(1).toBe(1);
+});
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
